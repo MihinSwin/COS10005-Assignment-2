@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Book movie tickets with CineMatch">
+
+    <meta name="author"
+          content="Mihin Premarathne">
+
+    <title>CineMatch - Book Tickets</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <script src="js/script.js"
+            defer></script>
+
+</head>
+
+
+<body>
+
+
+    <header class="page-header">
+
+        <nav class="navbar">
+
+            <a href="index.html"
+            class="logo">
+
+                <img src="images/logo.png"
+                    alt="CineMatch logo">
+
+            </a>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="movies.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="recommend.html">
+                        Recommendations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html"
+                       class="active">
+                        Book Tickets
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <section class="page-hero">
+
+            <p class="section-label">
+                TICKET BOOKING
+            </p>
+
+            <h1>
+                Your movie.
+                <span>Your session.</span>
+            </h1>
+
+            <p>
+                Select your movie, screening time, ticket type
+                and payment method to complete your booking.
+            </p>
+
+        </section>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="form-intro">
+
+            <p class="section-label">
+                BOOK YOUR MOVIE
+            </p>
+
+            <h2>
+                Complete your ticket details.
+            </h2>
+
+            <p>
+                If you selected a movie from the Movies or
+                Recommendations page, it will automatically
+                appear in the movie selection below.
+            </p>
+
+        </section>
+
+
+
+        <section class="booking-section">
+
+
+            <form id="bookingForm"
+                  class="main-form"
+                  method="post"
+                  action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+                  novalidate>
+
+
+                <fieldset>
+
+                    <legend>
+                        Customer Information
+                    </legend>
+
+
+
+                    <div class="form-group">
+
+                        <label for="bookingName">
+                            Full Name
+                        </label>
+
+                        <input type="text"
+                               id="bookingName"
+                               name="fullName">
+
+                        <span class="error-message"
+                              id="bookingNameError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="bookingEmail">
+                            Email Address
+                        </label>
+
+                        <input type="email"
+                               id="bookingEmail"
+                               name="email">
+
+                        <span class="error-message"
+                              id="bookingEmailError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="bookingPhone">
+                            Phone Number
+                        </label>
+
+                        <input type="text"
+                               id="bookingPhone"
+                               name="phone">
+
+                        <span class="error-message"
+                              id="bookingPhoneError">
+                        </span>
+
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <fieldset>
+
+                    <legend>
+                        Movie and Ticket Details
+                    </legend>
+
+
+
+                    <div class="form-group">
+
+                        <label for="movieSelect">
+                            Movie
+                        </label>
+
+                        <select id="movieSelect"
+                                name="movie">
+
+                            <option value="">
+                                Select a movie
+                            </option>
+
+                            <option value="Neon Pursuit">
+                                Neon Pursuit
+                            </option>
+
+                            <option value="Side Quest">
+                                Side Quest
+                            </option>
+
+                            <option value="Star Garden">
+                                Star Garden
+                            </option>
+
+                            <option value="Paper Moons">
+                                Paper Moons
+                            </option>
+
+                            <option value="Skybound">
+                                Skybound
+                            </option>
+
+                            <option value="Weekend Reset">
+                                Weekend Reset
+                            </option>
+
+                        </select>
+
+                        <span class="error-message"
+                              id="movieError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="screeningDateTime">
+                            Screening Date and Time
+                        </label>
+
+                        <input type="datetime-local"
+                               id="screeningDateTime"
+                               name="screeningDateTime">
+
+                        <span class="error-message"
+                              id="screeningError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="ticketQuantity">
+                            Number of Tickets
+                        </label>
+
+                        <input type="number"
+                               id="ticketQuantity"
+                               name="ticketQuantity"
+                               min="1"
+                               value="1">
+
+                        <span class="error-message"
+                              id="ticketQuantityError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="ticketType">
+                            Ticket Type
+                        </label>
+
+                        <select id="ticketType"
+                                name="ticketType">
+
+                            <option value="">
+                                Select ticket type
+                            </option>
+
+                            <option value="Adult">
+                                Adult
+                            </option>
+
+                            <option value="Child">
+                                Child
+                            </option>
+
+                            <option value="Student">
+                                Student
+                            </option>
+
+                        </select>
+
+                        <span class="error-message"
+                              id="ticketTypeError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="specialRequests">
+                            Special Requests
+                        </label>
+
+                        <textarea id="specialRequests"
+                                  name="specialRequests"
+                                  rows="4"
+                                  placeholder="Optional">
+                        </textarea>
+
+                    </div>
+
+
+
+                    <div class="booking-cost">
+
+                        <span>
+                            Booking Cost
+                        </span>
+
+                        <strong id="bookingCost">
+                            $0.00
+                        </strong>
+
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <fieldset>
+
+                    <legend>
+                        Payment
+                    </legend>
+
+
+
+                    <div class="form-group">
+
+                        <span class="form-label">
+                            Payment Method
+                        </span>
+
+
+                        <div class="option-group">
+
+                            <input type="radio"
+                                   id="paymentVoucher"
+                                   name="paymentMethod"
+                                   value="Voucher">
+
+                            <label for="paymentVoucher">
+                                Voucher
+                            </label>
+
+
+                            <input type="radio"
+                                   id="paymentOnline"
+                                   name="paymentMethod"
+                                   value="Online">
+
+                            <label for="paymentOnline">
+                                Online Payment
+                            </label>
+
+                        </div>
+
+
+                        <span class="error-message"
+                              id="paymentMethodError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div id="voucherFields"
+                         class="conditional-fields"
+                         hidden>
+
+
+                        <div class="form-group">
+
+                            <label for="voucherCode">
+                                Voucher Code
+                            </label>
+
+                            <input type="text"
+                                   id="voucherCode"
+                                   name="voucherCode"
+                                   maxlength="12">
+
+                            <span class="form-hint">
+                                Enter the 12-digit voucher code.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div id="cardFields"
+                         class="conditional-fields"
+                         hidden>
+
+
+                        <div class="form-group">
+
+                            <label for="cardType">
+                                Card Type
+                            </label>
+
+                            <select id="cardType"
+                                    name="cardType">
+
+                                <option value="">
+                                    Select card type
+                                </option>
+
+                                <option value="Visa">
+                                    Visa
+                                </option>
+
+                                <option value="Mastercard">
+                                    Mastercard
+                                </option>
+
+                                <option value="Amex">
+                                    American Express
+                                </option>
+
+                            </select>
+
+                            <span class="error-message"
+                                  id="cardTypeError">
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="cardNumber">
+                                Card Number
+                            </label>
+
+                            <input type="text"
+                                   id="cardNumber"
+                                   name="cardNumber"
+                                   autocomplete="off">
+
+
+                            <span class="error-message"
+                                  id="cardNumberError">
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="billingEmail">
+                            Billing Email Address
+                        </label>
+
+                        <input type="email"
+                               id="billingEmail"
+                               name="billingEmail">
+
+
+                        <div class="single-checkbox">
+
+                            <input type="checkbox"
+                                   id="sameEmail"
+                                   name="sameEmail">
+
+                            <label for="sameEmail">
+                                Same as email address
+                            </label>
+
+                        </div>
+
+
+                        <span class="error-message"
+                              id="billingEmailError">
+                        </span>
+
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <div class="form-button">
+
+                    <input type="submit"
+                           value="Confirm Booking"
+                           class="primary-button">
+
+                </div>
+
+
+            </form>
+
+
+
+            <aside class="booking-summary">
+
+                <p class="section-label">
+                    BOOKING GUIDE
+                </p>
+
+                <h2>
+                    Before you confirm.
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Check that you selected the correct movie.
+                    </li>
+
+                    <li>
+                        Screening dates cannot be in the past.
+                    </li>
+
+                    <li>
+                        You must book at least one ticket.
+                    </li>
+
+                    <li>
+                        Voucher and online payment use different fields.
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <a href="index.html"
+                class="logo">
+
+                    <img src="images/logo.png"
+                        alt="CineMatch logo">
+
+                </a>
+
+                <p>
+                    Movie discovery and ticket booking.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="movies.html">
+                    Movies
+                </a>
+
+                <a href="recommend.html">
+                    Recommendations
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="booking.html">
+                    Book
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+            COS10005 Web Development — Assignment 2
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

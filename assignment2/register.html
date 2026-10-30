@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Register for a CineMatch account">
+
+    <meta name="author"
+          content="Mihin Premarathne">
+
+    <title>CineMatch - Register</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <script src="js/script.js"
+            defer></script>
+
+</head>
+
+
+<body>
+
+
+    <header class="page-header">
+
+        <nav class="navbar">
+
+            <a href="index.html"
+            class="logo">
+
+                <img src="images/logo.png"
+                    alt="CineMatch logo">
+
+            </a>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="movies.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="recommend.html">
+                        Recommendations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html"
+                       class="active">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Book Tickets
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <section class="page-hero">
+
+            <p class="section-label">
+                JOIN CINEMATCH
+            </p>
+
+            <h1>
+                Create your
+                <span>movie account.</span>
+            </h1>
+
+            <p>
+                Register your details and tell us what kinds
+                of movies you enjoy watching.
+            </p>
+
+        </section>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="form-intro">
+
+            <p class="section-label">
+                REGISTRATION
+            </p>
+
+            <h2>
+                Create your account.
+            </h2>
+
+            <p>
+                Complete the form below to register with CineMatch.
+                All required information will be checked before
+                the form can be submitted.
+            </p>
+
+        </section>
+
+
+
+        <section class="form-section">
+
+
+            <form id="registerForm"
+                  class="main-form"
+                  action="#"
+                  method="post"
+                  novalidate>
+
+
+                <fieldset>
+
+                    <legend>
+                        Account Information
+                    </legend>
+
+
+
+                    <div class="form-group">
+
+                        <label for="username">
+                            Username
+                        </label>
+
+                        <input type="text"
+                               id="username"
+                               name="username">
+
+                        <span class="error-message"
+                              id="usernameError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input type="email"
+                               id="registerEmail"
+                               name="email">
+
+                        <span class="error-message"
+                              id="registerEmailError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="registerPhone">
+                            Phone Number
+                        </label>
+
+                        <input type="text"
+                               id="registerPhone"
+                               name="phone">
+
+                        <span class="error-message"
+                              id="registerPhoneError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input type="password"
+                               id="password"
+                               name="password">
+
+                        <span class="form-hint">
+                            Minimum 10 characters with uppercase,
+                            lowercase, number and special character.
+                        </span>
+
+                        <span class="error-message"
+                              id="passwordError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input type="password"
+                               id="confirmPassword"
+                               name="confirmPassword">
+
+                        <span class="error-message"
+                              id="confirmPasswordError">
+                        </span>
+
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <fieldset>
+
+                    <legend>
+                        Personal Preferences
+                    </legend>
+
+
+
+                    <div class="form-group">
+
+                        <span class="form-label">
+                            Gender
+                        </span>
+
+
+                        <div class="option-group">
+
+                            <input type="radio"
+                                   id="genderMale"
+                                   name="gender"
+                                   value="Male">
+
+                            <label for="genderMale">
+                                Male
+                            </label>
+
+
+                            <input type="radio"
+                                   id="genderFemale"
+                                   name="gender"
+                                   value="Female">
+
+                            <label for="genderFemale">
+                                Female
+                            </label>
+
+
+                            <input type="radio"
+                                   id="genderOther"
+                                   name="gender"
+                                   value="Other">
+
+                            <label for="genderOther">
+                                Other
+                            </label>
+
+                        </div>
+
+
+                        <span class="error-message"
+                              id="genderError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <span class="form-label">
+                            Preferred Movie Genre(s)
+                        </span>
+
+
+                        <div class="checkbox-group">
+
+                            <div>
+
+                                <input type="checkbox"
+                                       id="genreAction"
+                                       name="genres"
+                                       value="Action">
+
+                                <label for="genreAction">
+                                    Action
+                                </label>
+
+                            </div>
+
+
+                            <div>
+
+                                <input type="checkbox"
+                                       id="genreComedy"
+                                       name="genres"
+                                       value="Comedy">
+
+                                <label for="genreComedy">
+                                    Comedy
+                                </label>
+
+                            </div>
+
+
+                            <div>
+
+                                <input type="checkbox"
+                                       id="genreAnimation"
+                                       name="genres"
+                                       value="Animation">
+
+                                <label for="genreAnimation">
+                                    Animation
+                                </label>
+
+                            </div>
+
+
+                            <div>
+
+                                <input type="checkbox"
+                                       id="genreDrama"
+                                       name="genres"
+                                       value="Drama">
+
+                                <label for="genreDrama">
+                                    Drama
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="error-message"
+                              id="genreError">
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="country">
+                            Country / Region
+                        </label>
+
+                        <select id="country"
+                                name="country">
+
+                            <option value="">
+                                Select your country or region
+                            </option>
+
+                            <option value="Australia">
+                                Australia
+                            </option>
+
+                            <option value="Sri Lanka">
+                                Sri Lanka
+                            </option>
+
+                            <option value="India">
+                                India
+                            </option>
+
+                            <option value="New Zealand">
+                                New Zealand
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <span class="error-message"
+                              id="countryError">
+                        </span>
+
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <div class="form-button">
+
+                    <input type="submit"
+                           value="Create Account"
+                           class="primary-button">
+
+                </div>
+
+
+            </form>
+
+
+
+            <aside class="form-help">
+
+                <p class="section-label">
+                    BEFORE YOU REGISTER
+                </p>
+
+                <h2>
+                    Keep your details accurate.
+                </h2>
+
+                <p>
+                    CineMatch checks the information entered into
+                    this form before allowing it to be submitted.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Choose a username with at least five characters.
+                    </li>
+
+                    <li>
+                        Enter a valid email and phone number.
+                    </li>
+
+                    <li>
+                        Use a strong password.
+                    </li>
+
+                    <li>
+                        Make sure both passwords match.
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+                <a href="index.html"
+                class="logo">
+
+                    <img src="images/logo.png"
+                        alt="CineMatch logo">
+
+                </a>
+
+                <p>
+                    Movie discovery and ticket booking.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="movies.html">
+                    Movies
+                </a>
+
+                <a href="recommend.html">
+                    Recommendations
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="booking.html">
+                    Book
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+            COS10005 Web Development — Assignment 2
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

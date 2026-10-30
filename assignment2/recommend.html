@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Get a personalised movie recommendation from CineMatch">
+
+    <meta name="author"
+          content="Mihin Premarathne">
+
+    <title>CineMatch - Recommendations</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <script src="js/script.js"
+            defer></script>
+
+</head>
+
+
+<body>
+
+
+    <header class="page-header">
+
+        <nav class="navbar">
+
+            <a href="index.html"
+            class="logo">
+
+                <img src="images/logo.png"
+                    alt="CineMatch logo">
+
+            </a>
+
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="movies.html">
+                        Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="recommend.html"
+                       class="active">
+                        Recommendations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Book Tickets
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <section class="page-hero">
+
+            <p class="section-label">
+                MOVIE MATCH
+            </p>
+
+            <h1>
+                Not sure what
+                <span>to watch?</span>
+            </h1>
+
+            <p>
+                Tell us what you are looking for and CineMatch
+                will recommend a movie based on your preferences.
+            </p>
+
+        </section>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="recommend-intro">
+
+            <p class="section-label">
+                FIND YOUR MOVIE
+            </p>
+
+            <h2>
+                Three choices. One recommendation.
+            </h2>
+
+            <p>
+                Select your preferred genre, age group and viewing
+                preference. CineMatch will compare your selections
+                and suggest a suitable movie.
+            </p>
+
+        </section>
+
+
+
+        <div class="recommend-section">
+
+
+            <form id="recommendForm"
+                  class="recommend-form"
+                  action="#"
+                  method="get">
+
+
+                <fieldset>
+
+                    <legend>
+                        Your Movie Preferences
+                    </legend>
+
+
+                    <div class="form-group">
+
+                        <label for="recGenre">
+                            Preferred Genre
+                        </label>
+
+                        <select id="recGenre"
+                                name="genre"
+                                required>
+
+                            <option value="">
+                                Select a genre
+                            </option>
+
+                            <option value="Action">
+                                Action
+                            </option>
+
+                            <option value="Comedy">
+                                Comedy
+                            </option>
+
+                            <option value="Animation">
+                                Animation
+                            </option>
+
+                            <option value="Drama">
+                                Drama
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="recAge">
+                            Age Group
+                        </label>
+
+                        <select id="recAge"
+                                name="age"
+                                required>
+
+                            <option value="">
+                                Select an age group
+                            </option>
+
+                            <option value="Child">
+                                Child
+                            </option>
+
+                            <option value="Teen">
+                                Teen
+                            </option>
+
+                            <option value="Adult">
+                                Adult
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="recViewing">
+                            Viewing Preference
+                        </label>
+
+                        <select id="recViewing"
+                                name="viewing"
+                                required>
+
+                            <option value="">
+                                Select a viewing preference
+                            </option>
+
+                            <option value="Family">
+                                Family
+                            </option>
+
+                            <option value="Date Night">
+                                Date Night
+                            </option>
+
+                            <option value="Friends">
+                                Friends
+                            </option>
+
+                            <option value="Solo">
+                                Solo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-button">
+
+                        <input type="submit"
+                               value="Find My Movie"
+                               class="primary-button">
+
+                    </div>
+
+
+                </fieldset>
+
+
+            </form>
+
+
+
+            <aside class="recommend-help">
+
+                <p class="section-label">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    CineMatch compares your choices.
+                </h2>
+
+                <p>
+                    Your selections are checked using JavaScript.
+                    Different combinations of genre, age group and
+                    viewing preference will produce different movie
+                    recommendations.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Choose the genre you feel like watching.
+                    </li>
+
+                    <li>
+                        Select the age group of the viewer.
+                    </li>
+
+                    <li>
+                        Tell us who you are watching with.
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+        </div>
+
+
+
+        <section id="recommendationResult"
+         class="recommendation-result"
+         hidden>
+
+            <div class="recommendation-image">
+
+                <img id="recommendationImage"
+                    src="images/movie1.jpg"
+                    alt="Recommended movie poster">
+
+            </div>
+
+            <div class="recommendation-content">
+
+                <p class="section-label">
+                    YOUR MATCH
+                </p>
+
+                <h2 id="recommendationTitle">
+                    Recommended Movie
+                </h2>
+
+                <p id="recommendationReason"></p>
+
+                <a id="recommendationLink"
+                class="button"
+                href="booking.html">
+                    Book This Movie
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="cta-section">
+
+            <div>
+
+                <p class="section-label">
+                    WANT TO CHOOSE YOURSELF?
+                </p>
+
+                <h2>
+                    Browse every available movie.
+                </h2>
+
+            </div>
+
+
+            <a href="movies.html"
+               class="primary-button">
+
+                View All Movies
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <a href="index.html"
+                class="logo">
+
+                    <img src="images/logo.png"
+                        alt="CineMatch logo">
+
+                </a>
+
+                <p>
+                    Movie discovery and ticket booking.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="movies.html">
+                    Movies
+                </a>
+
+                <a href="recommend.html">
+                    Recommendations
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="booking.html">
+                    Book
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+            COS10005 Web Development — Assignment 2
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
